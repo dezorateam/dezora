@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dezora - Editing</title>
+    <!--[cdn]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/developerdhaval/MACUI@main/macui@3.0.css"
+        text="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[favicon]-->
+    <link rel="icon" type="image/x-icon"
+        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVcmpnf_dM-bJiScRYvgFvkHIO5HyyZ-ZILnmv2_MlcfniD7XNNVmldfjk1xebAtKCvVFjvFlsgkbgB4CX2q3emckjDnfdkdqQPjMZvjWhpsDLzhrnvPq2UO_sM-v1aZDV86WWM6p8ho-00G7pHOD6v9B3qvpjnWhmhD2YSu1KCvWrdjF86_nd3hwxyXOO/s1600/1000107745.png">
+    <!--[font]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--[icon]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
+/*Grid css*/
+.grids-3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.grid-3 {
+  padding: 1px;
+}
+
+@media (min-width: 900px) {
+  .grids-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 600px) {
+  .grids-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.nav-button {
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 50px;
+  transition: all 0.3s ease-out;
+  display: none;
+}
+
+.nav-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.aa {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .aa {
+    display: none;
+  }
+
+  .nav-button {
+    display: block;
+  }
+}
+
+.ab {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 13px;
+  margin-right: 20px;
+  border-radius: 150px;
+  transition: all 0.3s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+.ab:hover {
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+.ac {
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+}
+
+.ad {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .ad {
+    font-size: 30px;
+  }
+}
+
+.button-main {
+  background-color: #fdfdb6;
+  width: fit-content;
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  transition: all 0.3s ease-in;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.button-main:hover {
+  box-shadow: 4px 4px transparent;
+}
+
+@media (max-width: 600px) {
+  .button-main {
+    font-size: 17px;
+  }
+}
+
+.img-main {
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
+  mix-blend-mode: darken;
+}
+
+@media (max-width: 600px) {
+  .img-main {
+    height: fit-content;
+  }
+}
+
+.btn-outline {
+  margin: 5px;
+}
+
+.heading {
+  background-color: #fdfdb6;
+  width: fit-content;
+  font-size: x-large;
+  padding: 15px;
+  border-radius: 100px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-box {
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.note {
+  background-color: transparent;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  transition: all 0.3s ease-in;
+}
+.note:hover {
+  box-shadow: 0px 0px;
+}
+
+.heading-1 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.btn-1 {
+  background-color: #fbfbd5;
+  padding: 15px;
+  border-radius: 17px;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.btn-1:hover {
+  box-shadow: 4px 4px black;
+}
+
+.heading-title {
+  font-size: 45px;
+  font-weight: 700;
+  margin-left: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.img-2 {
+  border-radius: 20px;
+  height: 350px;
+}
+
+.text-main {
+  font-size: 30px;
+  font-weight: 600;
+  color: #a0a03c;
+}
+
+.text-mainn {
+  font-size: 25px;
+  font-weight: 600;
+  color: green;
+}
+
+@media (max-width: 600px) {
+  .heading-title {
+    margin-left: 0px;
+    font-size: 30px;
+  }
+
+  .img-2 {
+    height: max-content;
+  }
+
+  .text-main {
+    font-size: 25px;
+  }
+}
+
+.img-3 {
+  height: 270px;
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .img-3 {
+    height: max-content;
+  }
+}
+
+/* HTML: <div class="wavy-line"></div> */
+.wavy-line {
+  --s: 15px;
+  /* size of the wave */
+  --b: 2px;
+  /* thickness of the line */
+  --m: 0.9;
+  /* curvature of the wave [0 2] */
+
+  background: #404040;
+  --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+  height: calc(2*var(--R));
+  width: 100%;
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask:
+    radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+    radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+}
+
+.img-4 {
+  height: 100px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.line-main {
+  border: 2px solid black;
+  padding: 70px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+@media (max-width: 600px) {
+  .line-main {
+    padding: 27px;
+  }
+}
+
+        .text1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .img1 {
+            height: 300px;
+            mix-blend-mode: darken;
+        }
+
+        .class1 {
+            height: fit-content;
+            margin-top: 40px;
+        }
+
+        .class2 {
+            background-color: #ffdf5e;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: 700;
+            margin: 10px;
+            border-radius: 100px;
+        }
+
+        @media (max-width: 600px) {
+            .text1 {
+                font-size: 23px;
+            }
+
+            .img1 {
+                height: fit-content;
+            }
+
+            .class1 {
+                margin-top: 0px;
+            }
+        }
+
+        .heading2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            width: fit-content;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 2px 2px black;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .text2 {
+            font-size: 30px;
+        }
+
+        .class3 {
+            margin-left: 150px;
+        }
+
+        @media (max-width: 600px) {
+            .class3 {
+                margin-left: 0px;
+            }
+        }
+
+        .sec2 {
+            display: flex;
+
+        }
+
+        .io1 {
+            margin-left: 430px;
+        }
+
+        .io2 {
+            margin-left: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .sec2 {
+                display: block;
+            }
+
+            .io1 {
+                margin-left: 0px;
+            }
+
+            .io2 {
+                margin-left: 0px;
+            }
+        }
+
+        .note2 {
+            background-color: #fcf6dc;
+            padding: 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .note2:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .input1 {
+            border: 2px solid black;
+            margin: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            height: 50px;
+            padding: 10px;
+            transition: all 0.4s ease-in;
+            width: 500px;
+        }
+
+        .input1:hover {
+            box-shadow: 4px 4px black;
+            outline: none;
+        }
+
+        .input1::after {
+            box-shadow: 4px 4px black;
+            outline: none;
+        }
+
+        .input-btn {
+            background-color: #ffffb4;
+            padding: 15px;
+            border-radius: 17px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid black;
+            transition: all 0.3s ease-in;
+        }
+
+        .input-btn:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .form {
+            background-color: #fcf6dc;
+            ;
+            border: 2px solid black;
+            padding: 15px;
+            padding-left: 20px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            width: 750px;
+            margin-left: 360px;
+        }
+
+        @media (max-width: 600px) {
+            .input1 {
+                width: 230px;
+            }
+
+            .form {
+                width: 320px;
+                margin-left: 0px;
+            }
+        }
+
+        .heading3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: 150px;
+        }
+
+        @media (max-width: 600px) {
+            .heading3 {
+                font-size: 25px;
+                font-weight: 700;
+                margin-left: 0px;
+            }
+        }
+
+        .page1 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .pagebtn {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+        }
+
+        .pagebtn:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .back {
+            background-color: black;
+            color: white;
+            border-radius: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <p style="font-size: 30px; font-weight: bold;">Dezora</p>
+        <p style="font-weight: 500;">Create a Design</p>
+    </div>
+    <hr>
+
+    <!-- Hero -->
+    <div style="padding: 15px; background-color: #fbeeb8;;">
+        <div class="grids">
+            <div class="grid class1">
+                <p class="text1">Create a <span class="class2">Design</span> for your Busisness or works</p><br>
+                <p>Make a Professional Photos/Videos for your Busisness and esaily grow and advertisemnet your works with
+                    design.</p><br>
+            </div>
+            <div class="grid">
+                <img class="img1" src="https://i.pinimg.com/originals/c8/19/19/c819199ee14f958f0129ed98eff87870.gif"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Plan -->
+    <div style="padding: 15px;">
+        <center>
+            <p class="heading2">Design Plan</p>
+        </center>
+        <div class="sec2">
+            <div class="note2 io1" style="width: fit-content;">
+                <p class="text2">Photos editing</p><br>
+                <p>✔ Logo design</p>
+                <p>✔ Banner design</p>
+                <p>✔ Busisness card design</p>
+                <p>✔ Poster design</p>
+                <p>✔ Busisness invitaion design</p>
+                <p>✔ Design related your work</p><br><br>
+                <a class="button-main" style="font-size: 16px;" href="#build">Select plan</a><br><br>
+            </div>
+            <div class="note2 io2" style="width: fit-content;">
+                <p class="text2">Videos editing</p><br>
+                <p>✔ Ads editing</p>
+                <p>✔ Intro editing</p>
+                <p>✔ Outro editing</p>
+                <p>✔ Product editing</p>
+                <p>✔ Invitaion editing</p>
+                <p>✔ Editing related your work</p><br><br>
+                <a class="button-main" style="font-size: 16px;" href="#build">Select plan</a><br><br>
+            </div>
+        </div>
+    </div>
+    <p class="wavy-line"></p>
+
+    <!-- Form -->
+    <div style="padding: 15px;" id="build">
+        <center>
+            <p class="heading2">Lets Build!</p>
+            <p>Simply fill up below form according to what you want to build:</p><br>
+        </center>
+        <div class="form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6c91edd7-534f-494c-b235-10139d6d08fe">
+
+                <input class="input1" placeholder="Name" type="text" name="name" required><br>
+                <input class="input1" placeholder="Email" type="email" name="email" required><br>
+                <input class="input1" placeholder="Design Name" type="text" name="designname" required><br>
+                <textarea class="input1" placeholder="Describe your design" name="message" required></textarea><br>
+                <select class="input1" type="email" name="websiteplan" required required>
+                    <option value="" disabled selected hidden>Choose Design plan</option>
+                    <option value="special">Photo Editing</option>
+                    <option value="Customization">Video Editing</option>
+                </select><br><br>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                <label for="vehicle1"> I agree to the Terms & Conditions and Privacy Policy</label><br><br>
+                <p>We will contact you and discuss more about your design!</p><br>
+                <button class="input-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr><br>
+
+    <!-- Pages -->
+    <div style="padding: 15px;">
+        <p class="heading3">Important pages</p><br>
+
+        <div class="grids-3">
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Contact us</p><br>
+                    <p>Contact for any question about our service</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Read policy</p><br>
+                    <p>Read our Privacy policy and T&C</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Report</p><br>
+                    <p>Report any problem or issues</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <center><a class="back" href="https://dezorateam.github.io/design"><i class="fa-solid fa-circle-arrow-left"></i>
+            &nbsp; Back to Home page</a></center><br>
+</body>
+</html>
