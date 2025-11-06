@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dezora - Website</title>
+    <!--[cdn]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/developerdhaval/MACUI@main/macui@3.0.css"
+        text="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[favicon]-->
+    <link rel="icon" type="image/x-icon"
+        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVcmpnf_dM-bJiScRYvgFvkHIO5HyyZ-ZILnmv2_MlcfniD7XNNVmldfjk1xebAtKCvVFjvFlsgkbgB4CX2q3emckjDnfdkdqQPjMZvjWhpsDLzhrnvPq2UO_sM-v1aZDV86WWM6p8ho-00G7pHOD6v9B3qvpjnWhmhD2YSu1KCvWrdjF86_nd3hwxyXOO/s1600/1000107745.png">
+    <!--[font]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--[icon]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .text1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .img1 {
+            height: 300px;
+            mix-blend-mode: darken;
+        }
+
+        .class1 {
+            height: fit-content;
+            margin-top: 40px;
+        }
+
+        .class2 {
+            background-color: #ffdf5e;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: 700;
+            margin: 10px;
+            border-radius: 100px;
+        }
+
+        @media (max-width: 600px) {
+            .text1 {
+                font-size: 23px;
+            }
+
+            .img1 {
+                height: fit-content;
+            }
+
+            .class1 {
+                margin-top: 0px;
+            }
+        }
+
+        .heading2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            width: fit-content;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 2px 2px black;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .text2 {
+            font-size: 30px;
+        }
+
+        .class3 {
+            margin-left: 150px;
+        }
+
+        @media (max-width: 600px) {
+            .class3 {
+                margin-left: 0px;
+            }
+        }
+
+        .sec2 {
+            display: flex;
+
+        }
+
+        .io1 {
+            margin-left: 350px;
+        }
+
+        .io2 {
+            margin-left: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .sec2 {
+                display: block;
+            }
+
+            .io1 {
+                margin-left: 0px;
+            }
+
+            .io2 {
+                margin-left: 0px;
+            }
+        }
+
+        .note2 {
+            background-color: #fcf6dc;
+            padding: 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease-in;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .note2:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .input1 {
+            border: 2px solid black;
+            margin: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            height: 50px;
+            padding: 10px;
+            transition: all 0.4s ease-in;
+            width: 500px;
+        }
+
+        .input1:hover {
+            box-shadow: 4px 4px black;
+            outline: none;
+        }
+
+        .input1::after {
+            box-shadow: 4px 4px black;
+            outline: none;
+        }
+
+        .input-btn {
+            background-color: #ffffb4;
+            padding: 15px;
+            border-radius: 17px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid black;
+            transition: all 0.3s ease-in;
+        }
+
+        .input-btn:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .form {
+            background-color: #fcf6dc;
+            ;
+            border: 2px solid black;
+            padding: 15px;
+            padding-left: 20px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            width: 750px;
+            margin-left: 360px;
+        }
+
+        @media (max-width: 600px) {
+            .input1 {
+                width: 230px;
+            }
+
+            .form {
+                width: 320px;
+                margin-left: 0px;
+            }
+        }
+
+        .heading3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: 150px;
+        }
+
+        @media (max-width: 600px) {
+            .heading3 {
+                font-size: 25px;
+                font-weight: 700;
+                margin-left: 0px;
+            }
+        }
+
+        .page1 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .pagebtn {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+        }
+
+        .pagebtn:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .back {
+            background-color: black;
+            color: white;
+            border-radius: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <p style="font-size: 30px; font-weight: bold;">Dezora</p>
+        <p style="font-weight: 500;">Create a Website</p>
+    </div>
+    <hr>
+
+    <!-- Hero -->
+    <div style="padding: 15px; background-color: #fbeeb8;;">
+        <div class="grids">
+            <div class="grid class1">
+                <p class="text1">Create a <span class="class2">Website</span> for your Busisness or works</p><br>
+                <p>Make a Professional website for your Busisness and esaily grow and advertisemnet your works with
+                    website. we also provide a UI/UX design website.</p><br>
+            </div>
+            <div class="grid">
+                <img class="img1" src="https://i.pinimg.com/originals/d8/b8/4a/d8b84aef92673675ad6ffbd8d582f8b6.gif"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Plan -->
+    <div style="padding: 15px;">
+        <center>
+            <p class="heading2">Website Plan</p>
+        </center>
+        <div class="sec2">
+            <div class="note2 io1" style="width: fit-content;">
+                <p class="text2">Dezora's Special plan</p><br>
+                <p>✔ Hero section</p>
+                <p>✔ About section</p>
+                <p>✔ Contact page</p>
+                <p>✔ One more section</p>
+                <p>✔ Website policy page format</p>
+                <p>✔ One design related your work</p><br><br>
+                <a class="button-main" style="font-size: 16px;" href="#build">Select plan</a><br><br>
+            </div>
+            <div class="note2 io2" style="width: fit-content;">
+                <p class="text2">Customization plan</p><br>
+                <p>✔ Custom home page</p>
+                <p>✔ Custom three more page</p>
+                <p>✔ Two color theme</p>
+                <p>✔ Website policy format</p>
+                <p>✔ Contact and about page</p>
+                <p>✔ One design related your work</p><br><br>
+                <a class="button-main" style="font-size: 16px;" href="#build">Select plan</a><br><br>
+            </div>
+        </div>
+    </div>
+    <p class="wavy-line"></p>
+
+    <!-- Form -->
+    <div style="padding: 15px;" id="build">
+        <center>
+            <p class="heading2">Lets Build!</p>
+            <p>Simply fill up below form according to what you want to build:</p><br>
+        </center>
+        <div class="form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="6c91edd7-534f-494c-b235-10139d6d08fe">
+
+                <input class="input1" placeholder="Name" type="text" name="name" required><br>
+                <input class="input1" placeholder="Email" type="email" name="email" required><br>
+                <input class="input1" placeholder="Website Name" type="text" name="webname" required><br>
+                <textarea class="input1" placeholder="Describe your website" name="message" required></textarea><br>
+                <select class="input1" type="email" name="websiteplan" required required>
+                    <option value="" disabled selected hidden>Choose Website plan</option>
+                    <option value="special">Special plan</option>
+                    <option value="Customization">Customization plan</option>
+                </select><br><br>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                <label for="vehicle1"> I agree to the Terms & Conditions and Privacy Policy</label><br><br>
+                <p>We will contact you and discuss more about your website!</p><br>
+                <button class="input-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr><br>
+
+    <!-- Pages -->
+    <div style="padding: 15px;">
+        <p class="heading3">Important pages</p><br>
+
+        <div class="grids-3">
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Contact us</p><br>
+                    <p>Contact for any question about our service</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Read policy</p><br>
+                    <p>Read our Privacy policy and T&C</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="note">
+                    <p class="page1">Report</p><br>
+                    <p>Report any problem or issues</p>
+                    <button class="pagebtn"><a href="">View <i class="fa-solid fa-circle-arrow-right"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <center><a class="back" href="https://dezorateam.github.io/design"><i class="fa-solid fa-circle-arrow-left"></i>
+            &nbsp; Back to Home page</a></center><br>
+</body>
+</html>
