@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dezora</title>
+    <!--[cdn]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/developerdhaval/MACUI@main/macui@3.0.css"
+        text="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[favicon]-->
+    <link rel="icon" type="image/x-icon"
+        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVcmpnf_dM-bJiScRYvgFvkHIO5HyyZ-ZILnmv2_MlcfniD7XNNVmldfjk1xebAtKCvVFjvFlsgkbgB4CX2q3emckjDnfdkdqQPjMZvjWhpsDLzhrnvPq2UO_sM-v1aZDV86WWM6p8ho-00G7pHOD6v9B3qvpjnWhmhD2YSu1KCvWrdjF86_nd3hwxyXOO/s1600/1000107745.png">
+    <!--[font]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--[icon]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .text1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .img1 {
+            height: 230px;
+            mix-blend-mode: darken;
+        }
+
+        .class1 {
+            height: fit-content;
+            margin-top: 40px;
+        }
+
+        .class2 {
+            background-color: #ffdf5e;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: 700;
+            margin: 10px;
+            border-radius: 100px;
+        }
+
+        @media (max-width: 600px) {
+            .text1 {
+                font-size: 23px;
+            }
+
+            .img1 {
+                height: fit-content;
+            }
+
+            .class1 {
+                margin-top: 0px;
+            }
+        }
+
+        .heading2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            width: fit-content;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 2px 2px black;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .page1 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .pagebtn {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+        }
+
+        .pagebtn:hover {
+            box-shadow: 4px 4px black;
+        }
+
+        .back {
+            background-color: black;
+            color: white;
+            border-radius: 100px;
+            padding: 10px;
+        }
+
+        .input1 {
+            border: 2px solid rgb(222, 222, 222);
+            margin: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            height: 50px;
+            padding: 10px;
+            transition: all 0.4s ease-in;
+            width: 500px;
+        }
+
+        .input1:hover {
+            box-shadow: 4px 4px rgb(184, 184, 184);
+            outline: none;
+        }
+
+        .input1::after {
+            box-shadow: 4px 4px rgb(184, 184, 184);
+            outline: none;
+        }
+
+        .input-btn {
+            background-color: white;
+            padding: 15px;
+            border-radius: 17px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid rgb(184, 184, 184);
+            transition: all 0.3s ease-in;
+        }
+
+        .input-btn:hover {
+            box-shadow: 4px 4px rgb(184, 184, 184);
+        }
+
+        .form {
+            background-color: white;
+            padding: 15px;
+            padding-left: 20px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            height: fit-content;
+            width: 600px;
+            border: 2px solid rgb(184, 184, 184);
+            box-shadow: 0px 5px 20px rgb(229, 229, 229);
+        }
+
+        @media (max-width: 600px) {
+            .input1 {
+                width: 230px;
+            }
+
+            .form {
+                width: 320px;
+                margin-left: 0px;
+            }
+        }
+
+        .img0 {
+            mix-blend-mode: darken;
+        }
+
+        .img01 {
+            mix-blend-mode: darken;
+            height: 450px;
+            position: absolute;
+            left: 900px;
+            top: 1560px;
+        }
+
+        @media (max-width: 600px) {
+            .img01 {
+                mix-blend-mode: darken;
+                height: fit-content;
+                position: relative;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <p style="font-size: 30px; font-weight: bold;">Dezora</p>
+        <a href="https://dezorateam.github.io/design/" style="font-weight: 500;">Back &nbsp;<i
+                class="fa-solid fa-circle-arrow-right"></i> </a>
+    </div>
+    <hr>
+    <!-- Hero -->
+    <div style="padding: 15px; background-color: #fbeeb8;;">
+        <div class="grids">
+            <div class="grid class1">
+                <p class="text1">Contact us</p><br>
+                <p>Contact for any problem or issues related to Dezora.</p><br>
+            </div>
+            <div class="grid">
+                <img class="img1" src="https://i.pinimg.com/originals/e3/1b/75/e31b752875679b64fce009922f9f0dda.gif"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <hr><br>
+    <div style="padding: 15px;">
+        <center>
+            <div class="heading2">Contact ways</div>
+        </center>
+        <div class="grids-3">
+            <div class="grid-3">
+                <div class="notee">
+                    <p class="page1">Social Media</p><br>
+                    <p>Contact us on Instagram page</p><br>
+                    <button class="btn btn-neutral btn-outline"><a
+                            href="https://www.instagram.com/dezorateam?igsh=YmRndTN2ZnBvNHEw">Contact now</a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="notee">
+                    <p class="page1">Email ID</p><br>
+                    <p>dezorteam@gmail.com</p><br>
+                    <button class="btn btn-neutral btn-outline"><a href="mailto:dezorteam@gmail.com">Contact
+                            now</a></button>
+                </div>
+            </div>
+            <div class="grid-3">
+                <div class="notee">
+                    <p class="page1">Contact form</p><br>
+                    <p>Contact us from below form</p><br>
+                    <button class="btn btn-neutral btn-outline"><a href="#contactf">Contact now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p class="wavy-line"></p><br>
+    <div style="padding: 15px;" id="contactf">
+        <center>
+            <div class="heading">Contact form</div><br>
+        </center><br>
+        <div class="grids">
+            <div class="grid">
+                <img class="img0" src="https://i.pinimg.com/1200x/35/26/38/35263851377777709ea466babb462965.jpg" alt="">
+            </div>
+            <div class="grid">
+                <div class="form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6c91edd7-534f-494c-b235-10139d6d08fe">
+
+                        <input class="input1" placeholder="Name" type="text" name="name" required><br>
+                        <input class="input1" placeholder="Email" type="email" name="email" required><br>
+                        <textarea class="input1" placeholder="Type your message..." name="message"
+                            required></textarea><br>
+                        <button class="input-btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <hr><br>
+    <div style="padding: 15px;" id="service">
+        <center>
+            <div class="heading">Service center</div><br>
+        </center><br>
+        <div class="grids">
+            <div class="grid">
+                <div class="form">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6c91edd7-534f-494c-b235-10139d6d08fe">
+
+                        <input class="input1" placeholder="Name" type="text" name="name" required><br>
+                        <input class="input1" placeholder="Email" type="email" name="email" required><br>
+                        <select class="input1" type="email" name="websiteplan" required required>
+                            <option value="" disabled selected hidden>Choose your design</option>
+                            <option value="photo">Photo/Video/Ads</option>
+                            <option value="website">Website</option>
+                        </select><br>
+                        <textarea class="input1" placeholder="Describe design problem" name="message"
+                            required></textarea><br>
+                        <button class="input-btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="grid">
+                <img class="img01" src="https://i.pinimg.com/1200x/29/dd/db/29dddbb74db0c68adc5358271281e03a.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div><br><hr><br>
+</body>
+
+</html>
